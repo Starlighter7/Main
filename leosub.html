@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leo's Exclusive Subscription Plans</title>
+    <style>
+        :root {
+            --primary-color: #BB86FC;
+            --primary-variant: #3700B3;
+            --secondary-color: #03DAC6;
+            --background: #121212;
+            --surface: #1E1E1E;
+            --error: #CF6679;
+            --on-primary: #000000;
+            --on-secondary: #000000;
+            --on-background: #FFFFFF;
+            --on-surface: #FFFFFF;
+            --on-error: #000000;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--background);
+            color: var(--on-background);
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+        }
+
+        .plan {
+            background-color: var(--surface);
+            border-radius: 16px;
+            margin: 20px auto;
+            padding: 20px;
+            width: 80%;
+            max-width: 500px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .plan-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .price {
+            font-size: 20px;
+            color: var(--secondary-color);
+        }
+
+        .description {
+            font-size: 16px;
+            margin: 10px 0;
+            color: var(--on-surface);
+        }
+
+        .subscribe-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            color: var(--on-primary);
+            background-color: var(--primary-color);
+            border: none;
+            border-radius: 24px;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .subscribe-button:hover {
+            background-color: var(--primary-variant);
+        }
+
+        .floating-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--primary-color);
+            color: var(--on-primary);
+            border: none;
+            border-radius: 50%;
+            width: 56px;
+            height: 56px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .popup {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: var(--surface);
+            border: 1px solid var(--primary-color);
+            border-radius: 16px;
+            padding: 15px;
+            width: 300px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+
+        .popup h2 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+
+        .popup p {
+            font-size: 14px;
+            color: var(--on-surface);
+        }
+
+        .discover-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: var(--primary-color);
+            color: var(--on-primary);
+            border: none;
+            border-radius: 50%;
+            width: 56px;
+            height: 56px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .discover-button svg {
+            width: 32px;
+            height: 32px;
+            fill: currentColor;
+        }
+    </style>
+</head>
+<body>
+    <h1>Leo's Exclusive Subscription Plans</h1>
+    <div class="plan">
+        <div class="plan-title">Free Tier</div>
+        <div class="price">FREE</div>
+        <div class="description">Get ignored and experience top-notch attitude. Because why not?</div>
+        <a href="#" class="subscribe-button">Get Ignored</a>
+    </div>
+    <div class="plan">
+        <div class="plan-title">$50 Tier</div>
+        <div class="price">$50</div>
+        <div class="description">Talk with Leo. Yes, you read that right. Actual words from the man himself.</div>
+        <a href="#" class="subscribe-button">Talk with Leo</a>
+    </div>
+    <div class="plan">
+        <div class="plan-title">$100 Tier</div>
+        <div class="price">$100</div>
+        <div class="description">Talk with Leo while he smiles. Because you deserve a little happiness.</div>
+        <a href="#" class="subscribe-button">Talk with a Smile</a>
+    </div>
+    <div class="plan">
+        <div class="plan-title">$200 Tier</div>
+        <div class="price">$200</div>
+        <div class="description">Get thanks along with other perks. Finally, some recognition!</div>
+        <a href="#" class="subscribe-button">Get Thanks</a>
+    </div>
+    <div class="plan">
+        <div class="plan-title">$500 Tier</div>
+        <div class="price">$500</div>
+        <div class="description">Leo personally acknowledges your existence. You'll never forget it!</div>
+        <a href="#" class="subscribe-button">Get Acknowledged</a>
+    </div>
+    <div class="plan">
+        <div class="plan-title">$1000 Tier</div>
+        <div class="price">$1000</div>
+        <div class="description">Spend an entire hour with Leo where he might even listen to you.</div>
+        <a href="#" class="subscribe-button">Get Listened To</a>
+    </div>
+    <div class="plan">
+        <div class="plan-title">$5000 Tier</div>
+        <div class="price">$5000</div>
+        <div class="description">A day with Leo where he pretends to be interested in your life. Wow!</div>
+        <a href="#" class="subscribe-button">Get Pretended Interest</a>
+    </div>
+
+    <button class="floating-button" onclick="togglePopup()">?</button>
+
+    <div class="popup" id="termsPopup">
+        <h2>Terms & Conditions</h2>
+        <p>Only selected questions may be asked...otherwise Leonidas might get upset and not be able to sleep. Your trivial queries could disrupt the cosmic balance of his zen.</p>
+        <p>Additional information: If you have purchased an animal and Leonidas does not feel well, you will not get your money back. Not even a cent. Instead, consider this a lesson in the art of emotional resilience.</p>
+        <p>More nuggets of wisdom: Our support team reserves the right to ignore complaints delivered via carrier pigeon, smoke signals, or overly enthusiastic semaphore.</p>
+        <p>If you want to invite Leonidas to dinner, the minimum is $100...you will receive an extra smile. For $200, you get a normal thank you, and for $300, he says 'Thank you'. But for very special customers, we have the luxury lunch package for $500. A 'Thank you' with a smile and as a bonus, a 'How are you'.</p>
+        <p>Lastly, remember: Any attempts to out-sarcasm Leonidas will be met with a polite but firm eye roll. Proceed at your own peril.</p>
+    </div>
+
+    <a href="https://.github.io/Projects/leodes.html" class="discover-button" title="Discover">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5.5-2.5l7.51-3.49L17.5 6.5 9.99 9.99 6.5 17.5zm5.5-6.6c.61 0 1.1.49 1.1 1.1s-.49 1.1-1.1 1.1-1.1-.49-1.1-1.1.49-1.1 1.1-1.1z"/>
+        </svg>
+    </a>
+
+    <script>
+        function togglePopup() {
+            var popup = document.getElementById('termsPopup');
+            if (popup.style.display === 'none' || popup.style.display === '') {
+                popup.style.display = 'block';
+            } else {
+                popup.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
